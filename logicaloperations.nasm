@@ -22,17 +22,18 @@ _start:
 	mov rbx, qword [var1]
 	and rbx, rax
 
-	mov rbx, qword [var1]
+	mov rbx, qword [var2]
 	and rbx, qword [var1]
 
 	;OR operation
 
 	mov rax, qword [var2]
 	mov rbx, qword [var1]
-	or rbx, rax
+	or rax, rbx
 
 	mov rbx, qword [var1]
-	or rbx, qword [var1]
+
+	or [var2], qword rbx
 
 	;XOR operation
 
@@ -42,7 +43,7 @@ _start:
 
 	xor rax,rax
 
-	xor qword [var1],rax
+	xor qword rax, [var1]
 
 	;exit the program 
 
